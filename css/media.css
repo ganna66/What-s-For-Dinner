@@ -1,0 +1,25 @@
+@media (max-width: 780px) {
+  .right {
+    font-size: 14px;
+  }
+  .nav.nav-pills {
+    flex-wrap: nowrap;
+  }
+  .nav-item {
+    flex-grow: 1;
+  }
+  .nav-item button {
+    font-size: 14px;
+  }
+}
+@media (max-width: 991px) {
+  .left {
+    border-radius: 20px 20px 0 0 !important;
+  }
+  .right {
+    border-radius: 0 0 20px 20px !important;
+  }
+  .main {
+    height: fit-content;
+  }
+}

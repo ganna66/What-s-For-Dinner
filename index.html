@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+    <title>What's For Dinner</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/media.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary py-3 shadow bg-white">
+      <div class="container">
+        <div class="logo d-flex align-items-center gap-3">
+          <div class="icon rounded-circle shadow">
+            <i
+              class="fa-solid fa-utensils fa-lg"
+              style="color: rgb(255, 255, 255)"
+            ></i>
+          </div>
+          <div class="logo-caption">
+            <h1 class="fs-4 m-0 text-black fw-bold">What's for Dinner</h1>
+            <span>Your daily meal inspiration </span>
+          </div>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div
+            class="account d-flex gap-4 justify-content-center align-items-center"
+          >
+            <div class="save">
+              <i class="fa-solid fa-bookmark fa-lg"></i>
+            </div>
+            <div class="clock">
+              <i class="fa-solid fa-clock-rotate-left fa-lg"></i>
+            </div>
+            <div class="setting">
+              <i class="fa-solid fa-gear fa-lg"></i>
+            </div>
+            <div class="profile rounded-circle overflow-hidden">
+              <img
+                src="./images/imgi_1_avatar-4.jpg"
+                alt="person account"
+                class="w-100"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <header id="header" class="pt-3 pb-5">
+      <div class="container">
+        <div class="main row rounded-5 bg-white flex-lg-wrap">
+          <div
+            id="img"
+            class="left col-lg-5 p-0 d-flex align-self-stretch position-relative rounded-start-5 overflow-hidden"
+          ></div>
+
+          <div class="right col-lg-7 align-items-center">
+            <div class="top-content d-flex flex-column pt-5">
+              <div>
+                <span id="level"></span>
+                <span id="country"></span>
+              </div>
+              <div
+                class="d-flex justify-content-between align-items-center mb-3 w-100"
+              >
+                <div class="dinner-name">
+                  <h2 id="foodName" class="text-black fw-bold"></h2>
+                  <span id="description" class="text-secondary fs-6"> </span>
+                </div>
+                <div
+                  class="dinner-icons align-self-start d-flex align-items-center justify-content-center gap-2"
+                >
+                  <div class="icon rounded-3">
+                    <i
+                      class="fa-solid fa-bookmark fa-lg"
+                      style="color: rgb(245, 73, 0)"
+                    ></i>
+                  </div>
+                  <div class="icon rounded-3">
+                    <i
+                      class="fa-solid fa-share-nodes fa-lg"
+                      style="color: rgb(245, 73, 0)"
+                    ></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="alertMsg d-none px-4 py-1 rounded-4 border-5 border-start border-danger d-flex justify-content-start align-items-center gap-2 mb-2"
+              style="background-color: #fef2f2"
+            >
+              <i
+                class="fa-solid fa-circle-exclamation fa-lg"
+                style="color: rgb(251, 44, 54)"
+              ></i>
+              <div class="">
+                <span class="fw-bold" style="color: #9f244c"
+                  >Extended Preparation Time</span
+                ><br />
+                <span style="color: #e7000b"
+                  >This recipe requires more than 40 minutes to prepare. Plan
+                  accordingly!</span
+                >
+              </div>
+            </div>
+            <div class="bottom-content">
+              <ul
+                class="nav nav-pills mb-3 justify-content-center"
+                id="pills-tab"
+                role="tablist"
+              >
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link active"
+                    id="pills-home-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-ingredient"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-home"
+                    aria-selected="true"
+                  >
+                    <i class="fa-solid fa-list-check fa-lg me-2"></i>Ingredient
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="pills-profile-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-instruction"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-profile"
+                    aria-selected="false"
+                  >
+                    <i class="fa-solid fa-book-open fa-lg me-2"></i>Instruction
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="pills-contact-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-nutrition"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-contact"
+                    aria-selected="false"
+                  >
+                    <i class="fa-solid fa-chart-pie fa-lg me-2"></i>Nutrition
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="pills-chef-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-chef"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-chef"
+                    aria-selected="false"
+                  >
+                    <i class="fa-solid fa-lightbulb fa-lg me-2"></i>Chef's Tips
+                  </button>
+                </li>
+              </ul>
+              <div class="tab-content overflow-auto" id="pills-tabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="pills-ingredient"
+                  role="tabpanel"
+                  aria-labelledby="pills-home-tab"
+                  tabindex="0"
+                >
+                  <div class="ing p-3 m-3 rounded-4">
+                    <ul id="ingredient" class="list-unstyled">
+                      <!-- list eg. putted in js
+                      
+                      <li
+                        class="mb-3 d-flex align-items-center justify-content-start"
+                      >
+                        <span class="me-2 rounded-circle text-white numbers"
+                          >1</span
+                        >
+                        <p class="m-0"></p>
+                      </li>
+                      -->
+                    </ul>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="pills-instruction"
+                  role="tabpanel"
+                  aria-labelledby="pills-profile-tab"
+                  tabindex="0"
+                >
+                  <div class="ins p-2 m-3 rounded-4 overflow-auto pb-3">
+                    <ul id="instruction" class="list-unstyled">
+                      <!-- list ingredient eg 
+                      
+                      <li
+                        class="d-flex align-items-center justify-content-start mb-3"
+                      >
+                        <span class="me-2 ins-num rounded-4">1</span>
+                        <p class="align-self-end">
+                          Wash and dry romaine lettuce thoroughly. Tear into
+                          bite-sized pieces.
+                        </p>
+                      </li> -->
+                    </ul>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="pills-nutrition"
+                  role="tabpanel"
+                  aria-labelledby="pills-contact-tab"
+                  tabindex="0"
+                >
+                  <div class="container text-center">
+                    <div class="row row-cols-2 g-3 p-2">
+                      <div class="col">
+                        <div
+                          class="inner p-3 bg-light rounded-2 d-flex align-items-center justify-content-start"
+                        >
+                          <div
+                            class="calories d-flex align-items-center justify-content-center me-2 rounded-2 bg-danger-subtle p-2"
+                          >
+                            <i
+                              class="fa-solid fa-fire"
+                              style="color: rgb(245, 73, 0)"
+                            ></i>
+                          </div>
+                          <span class="flex-grow-1 text-start fw-semibold"
+                            >Calories</span
+                          >
+                          <p class="align-self-center m-0 fw-bold fs-5">
+                            320 kcal
+                          </p>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div
+                          class="inner p-3 bg-light rounded-2 d-flex align-items-center justify-content-start"
+                        >
+                          <div
+                            class="gym d-flex align-items-center justify-content-center me-2 rounded-2 bg-info-subtle p-2"
+                          >
+                            <i
+                              class="fa-solid fa-dumbbell"
+                              style="color: rgb(21, 93, 252)"
+                            ></i>
+                          </div>
+                          <span class="flex-grow-1 text-start fw-semibold"
+                            >Protein</span
+                          >
+                          <p class="align-self-center m-0 fw-bold fs-5">
+                            12g kcal
+                          </p>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div
+                          class="inner p-3 bg-light rounded-2 d-flex align-items-center justify-content-start"
+                        >
+                          <div
+                            class="carbs d-flex align-items-center justify-content-center me-2 rounded-2 bg-secondary-subtle p-2"
+                          >
+                            <i
+                              class="fa-solid fa-wheat-awn"
+                              style="color: rgb(211, 141, 11)"
+                            ></i>
+                          </div>
+                          <span class="flex-grow-1 text-start fw-semibold"
+                            >Carbohydrates
+                          </span>
+                          <p class="align-self-center m-0 fw-bold fs-5">18g</p>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div
+                          class="inner p-3 bg-light rounded-2 d-flex align-items-center justify-content-start"
+                        >
+                          <div
+                            class="fats d-flex align-items-center justify-content-center me-2 rounded-2 bg-danger-subtle p-2"
+                          >
+                            <i
+                              class="fa-solid fa-droplet"
+                              style="color: rgb(255, 0, 0)"
+                            ></i>
+                          </div>
+                          <span class="flex-grow-1 text-start fw-semibold"
+                            >Fats
+                          </span>
+                          <p class="align-self-center m-0 fw-bold fs-5">22g</p>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div
+                          class="inner p-3 bg-light rounded-2 d-flex align-items-center justify-content-start"
+                        >
+                          <div
+                            class="fiber d-flex align-items-center justify-content-center me-2 rounded-2 bg-success-subtle p-2"
+                          >
+                            <i
+                              class="fa-solid fa-seedling"
+                              style="color: rgb(0, 166, 62)"
+                            ></i>
+                          </div>
+                          <span class="flex-grow-1 text-start fw-semibold"
+                            >Fiber
+                          </span>
+                          <p class="align-self-center m-0 fw-bold fs-5">3g</p>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div
+                          class="inner p-3 bg-light rounded-2 d-flex align-items-center justify-content-start"
+                        >
+                          <div
+                            class="sodium d-flex align-items-center justify-content-center me-2 rounded-2 p-2"
+                          >
+                            <i
+                              class="fa-solid fa-cube"
+                              style="color: rgb(230, 0, 118)"
+                            ></i>
+                          </div>
+                          <span class="flex-grow-1 text-start fw-semibold"
+                            >Fiber
+                          </span>
+                          <p class="align-self-center m-0 fw-bold fs-5">3g</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="pills-chef"
+                  role="tabpanel"
+                  aria-labelledby="pills-disabled-tab"
+                  tabindex="0"
+                >
+                  <div id="tips" class="chef-list p-3">
+                    <!-- <div
+                      class="item mb-3 rounded-4 p-4 bg-danger-subtle border-start border-danger border-3 d-flex justify-content-start align-items-center"
+                    >
+                      <div class="check me-2 rounded-circle">
+                        <i
+                          class="fa-solid fa-check fa-xs d-flex align-items-center justify-content-center"
+                          style="color: rgb(255, 255, 255)"
+                        ></i>
+                      </div>
+                      <p class="m-0">
+                        Use cold, crisp lettuce for best texture
+                      </p>
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bottom-random px-2 border-1 border-secondary-subtle border-top pt-4 pb-4"
+            >
+              <button
+                onclick="displayMealContent()"
+                class="random d-flex align-items-center justify-content-start py-3 px-4 text-white fw-semibold"
+              >
+                <i
+                  class="fa-solid fa-arrows-rotate me-2"
+                  style="color: rgb(255, 255, 255)"
+                ></i>
+                Try Another Recipe
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

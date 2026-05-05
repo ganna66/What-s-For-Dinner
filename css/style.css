@@ -1,0 +1,198 @@
+:root {
+  --primary-color: #fd4228;
+  --secondary-color: #fffbeb;
+  --gray-color: rgb(74, 85, 101);
+  --dark-gray: #364153;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #e69581 #f1f1f1;
+}
+
+.navbar-collapse {
+  flex-grow: 0;
+}
+
+.bg-body-tertiary {
+  background-color: white !important;
+}
+
+.logo-caption {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.logo .icon {
+  background-color: var(--primary-color);
+  padding: 10px !important;
+}
+
+.account .profile {
+  width: 45px;
+  border: 2px solid var(--primary-color);
+}
+
+.account .save,
+.account .clock,
+.account .setting {
+  color: rgb(74, 85, 101);
+  transition: all 0.2s;
+}
+
+.account .save:hover,
+.account .clock:hover,
+.account .setting:hover {
+  color: var(--primary-color);
+}
+
+/* Header Section */
+#header {
+  background-color: #fffbea;
+}
+
+.dinner-name h2 {
+  font-size: 36px;
+}
+
+.dinner-icons .icon {
+  padding: 10px;
+  background-color: var(--secondary-color);
+}
+
+.dinner-name {
+  padding: 15px;
+  position: relative;
+}
+
+#level,
+#country {
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+#level {
+  background-color: #dbfce7;
+  color: green;
+  /* position: absolute;
+  top: 20px;
+  left: 20px; */
+  margin-right: 5px;
+}
+
+#country {
+  background-color: #dbeafe;
+  color: blue;
+  /* position: absolute;
+  top: 20px;
+  left: 100px; */
+}
+
+.nav-pills {
+  --bs-nav-pills-link-active-color: var(--primary-color);
+  --bs-nav-pills-link-active-bg: none;
+}
+
+.nav {
+  --bs-nav-link-color: var(--gray-color);
+  --bs-nav-link-hover-color: var(--dark-gray);
+}
+
+.nav-link {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.nav-link.active {
+  border-bottom: var(--primary-color) 2px solid;
+}
+
+.nav-pills .nav-link {
+  border-radius: 0px;
+}
+
+.numbers {
+  background-color: var(--primary-color);
+  padding: 5px 9px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.ing,
+.ins {
+  background-color: var(--secondary-color);
+}
+
+.ins-num {
+  padding: 10px 15px;
+  background-color: var(--primary-color);
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+}
+
+.sodium {
+  background-color: #fce7f3;
+}
+.check {
+  background-color: #e17100;
+  padding: 10px 4px;
+}
+
+.random {
+  border-radius: 15px;
+  background: linear-gradient(
+    to right top,
+    rgba(255, 185, 0, 1) 5%,
+    rgba(245, 73, 0, 1) 57%
+  );
+  border: none;
+  box-shadow: 0px 2px 3px rgba(120, 120, 120, 0.5);
+  transition: transform ease-in-out 0.2s;
+}
+.random:hover {
+  background: var(--primary-color);
+  transform: scale(1.03);
+}
+.main {
+  height: 750px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 5px rgba(120, 120, 120, 0.6);
+}
+.tab-content {
+  height: 350px;
+}
+
+.left {
+  height: 100%;
+}
+
+/* .left img {
+  height: 100%;
+  object-fit: cover;
+} */
+
+.right {
+  height: 100%;
+}
+
+.review {
+  top: 25px;
+  left: 25px;
+}
+
+.revNumber {
+  font-size: 14px;
+}
+
+.time {
+  bottom: 40px;
+}
+
+.nav.nav-pills {
+  display: flex;
+  flex-wrap: nowrap;
+}
